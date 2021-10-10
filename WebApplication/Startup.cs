@@ -1,7 +1,9 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,6 +13,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication.Infrastructure.Sql;
+using WebApplication.Infrastructure.Sql.Models;
+using WebApplication.Models;
 
 namespace WebApplication
 {
@@ -27,6 +32,16 @@ namespace WebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<MySettings>(Configuration.GetSection("WebApi"));
+
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddDbContext<ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile<ShopProfile>();
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,7 +62,7 @@ namespace WebApplication
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
-                c.RoutePrefix = string.Empty;
+//                c.RoutePrefix = string.Empty;
             });
 
             app.UseHttpsRedirection();
