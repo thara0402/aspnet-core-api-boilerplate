@@ -40,7 +40,8 @@ namespace WebApplication
             services.AddDbContext<Infrastructure.Sql.Models.ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
 
             // Cosmos
-            services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
+//            services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
+            services.AddSingleton(new CosmosClientBuilder("AccountEndpoint=https://gunners-style.documents.azure.com:443/;AccountKey=IXtgNpP3aCIAxxRHyY85xjzPH4nC4ZcTIQZiOiQXqpHalEvEaqRCqmRaU2TbAuXrPzAT4JkbYxoOWSLhBafVDA==;")
                 .WithConnectionModeDirect()
                 .WithCustomSerializer(new MyCosmosJsonSerializer())
                 .Build());
