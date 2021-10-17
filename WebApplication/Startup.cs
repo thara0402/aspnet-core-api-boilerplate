@@ -40,10 +40,17 @@ namespace WebApplication
             services.AddDbContext<Infrastructure.Sql.Models.ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
 
             // Cosmos
-            var test = new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
-                .WithConnectionModeDirect()
-                .WithCustomSerializer(new MyCosmosJsonSerializer())
-                .Build();
+            var cosmosClient = new CosmosClient(Configuration["WebApi:CosmosConnection"], new CosmosClientOptions
+            {
+                ConnectionMode = ConnectionMode.Direct
+            });
+
+
+            //var test = new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
+            //    .WithConnectionModeDirect()
+            //    .WithCustomSerializer(new MyCosmosJsonSerializer())
+            //    .Build();
+
             //services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
             //    .WithConnectionModeDirect()
             //    .WithCustomSerializer(new MyCosmosJsonSerializer())
