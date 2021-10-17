@@ -40,12 +40,6 @@ namespace WebApplication
             services.AddDbContext<Infrastructure.Sql.Models.ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
 
             // Cosmos
-            var cosmosClient = new CosmosClient(Configuration["WebApi:CosmosConnection"], new CosmosClientOptions
-            {
-                ConnectionMode = ConnectionMode.Direct
-            });
-
-
             //var test = new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
             //    .WithConnectionModeDirect()
             //    .WithCustomSerializer(new MyCosmosJsonSerializer())
@@ -55,7 +49,7 @@ namespace WebApplication
             //    .WithConnectionModeDirect()
             //    .WithCustomSerializer(new MyCosmosJsonSerializer())
             //    .Build());
-            //            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
+            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {

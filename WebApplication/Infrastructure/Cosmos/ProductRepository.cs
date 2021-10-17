@@ -12,8 +12,17 @@ namespace WebApplication.Infrastructure.Cosmos
     {
         private readonly Container _container;
 
-        public ProductRepository(CosmosClient cosmosClient)
+//        public ProductRepository(CosmosClient cosmosClient)
+        public ProductRepository()
         {
+            // dbg
+            var cosmosClient = new Microsoft.Azure.Cosmos.Fluent.CosmosClientBuilder("AccountEndpoint=https://gunners-style.documents.azure.com:443/;AccountKey=IXtgNpP3aCIAxxRHyY85xjzPH4nC4ZcTIQZiOiQXqpHalEvEaqRCqmRaU2TbAuXrPzAT4JkbYxoOWSLhBafVDA==;")
+                .WithConnectionModeDirect()
+                .WithCustomSerializer(new MyCosmosJsonSerializer())
+                .Build();
+
+            // dbg
+
             _container = cosmosClient.GetContainer("Shop", "Product");
         }
 
