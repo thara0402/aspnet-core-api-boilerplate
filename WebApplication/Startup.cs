@@ -44,7 +44,7 @@ namespace WebApplication
                 .WithConnectionModeDirect()
                 .WithCustomSerializer(new MyCosmosJsonSerializer())
                 .Build());
-            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
+            //            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
