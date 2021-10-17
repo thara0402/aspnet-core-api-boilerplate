@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,8 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Sql;
-using WebApplication.Infrastructure.Sql.Models;
+using WebApplication.Infrastructure.Cosmos.Models;
 using WebApplication.Models;
 
 namespace WebApplication
@@ -33,8 +35,16 @@ namespace WebApplication
         {
             services.Configure<MySettings>(Configuration.GetSection("WebApi"));
 
-            services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddDbContext<ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
+            // Sql
+            services.AddTransient<Infrastructure.Sql.IProductRepository, Infrastructure.Sql.ProductRepository>();
+            services.AddDbContext<Infrastructure.Sql.Models.ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
+
+            // Cosmos
+            services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
+                .WithConnectionModeDirect()
+                .WithCustomSerializer(new MyCosmosJsonSerializer())
+                .Build());
+            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
@@ -47,6 +57,23 @@ namespace WebApplication
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication", Version = "v1" });
+
+                c.TagActionsBy(api =>
+                {
+                    if (api.GroupName != null)
+                    {
+                        return new[] { api.GroupName };
+                    }
+
+                    var controllerActionDescriptor = api.ActionDescriptor as ControllerActionDescriptor;
+                    if (controllerActionDescriptor != null)
+                    {
+                        return new[] { controllerActionDescriptor.ControllerName };
+                    }
+
+                    throw new InvalidOperationException("Unable to determine tag for endpoint.");
+                });
+                c.DocInclusionPredicate((name, api) => true);
             });
         }
 

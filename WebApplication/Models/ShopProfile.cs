@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using WebApplication.Infrastructure.Sql.Models;
+
 
 namespace WebApplication.Models
 {
@@ -7,8 +7,15 @@ namespace WebApplication.Models
     {
         public ShopProfile()
         {
-            CreateMap<Product, ProductResponse>();
-            CreateMap<ProductRequest, Product>();
+            // SQL
+            CreateMap<Infrastructure.Sql.Models.Product, ProductResponse>()
+                .ForMember(dst => dst.ProductId, opt => opt.MapFrom(src => src.ProductId.ToString()));
+            CreateMap<ProductRequest, Infrastructure.Sql.Models.Product>();
+
+            // Cosmos DB
+            CreateMap<Infrastructure.Cosmos.Models.Product, ProductResponse>()
+                .ForMember(dst => dst.ProductId, opt => opt.MapFrom(src => src.Id));
+            CreateMap<ProductRequest, Infrastructure.Cosmos.Models.Product>();
         }
     }
 }

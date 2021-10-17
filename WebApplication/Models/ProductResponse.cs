@@ -5,7 +5,7 @@
         /// <summary>
         /// ID
         /// </summary>
-        public long ProductId { get; set; }
+        public string ProductId { get; set; }
 
         /// <summary>
         /// 説明

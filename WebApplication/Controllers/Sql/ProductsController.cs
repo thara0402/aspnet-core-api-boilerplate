@@ -7,10 +7,11 @@ using WebApplication.Infrastructure.Sql;
 using WebApplication.Infrastructure.Sql.Models;
 using WebApplication.Models;
 
-namespace WebApplication.Controllers
+namespace WebApplication.Controllers.Sql
 {
+    [ApiExplorerSettings(GroupName = "Products with SQL Database")]
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/sql/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -54,9 +55,9 @@ namespace WebApplication.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ProductResponse>> Get(long id)
+        public async Task<ActionResult<ProductResponse>> Get(string id)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetByIdAsync(long.Parse(id));
             if (entity == null)
             {
                 return NotFound();
@@ -96,9 +97,9 @@ namespace WebApplication.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Put(long id, [FromBody] ProductRequest product)
+        public async Task<IActionResult> Put(string id, [FromBody] ProductRequest product)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetByIdAsync(long.Parse(id));
             if (entity == null)
             {
                 return NotFound();
@@ -119,9 +120,9 @@ namespace WebApplication.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete(string id)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetByIdAsync(long.Parse(id));
             if (entity == null)
             {
                 return NotFound();
