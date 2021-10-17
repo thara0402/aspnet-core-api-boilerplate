@@ -43,7 +43,7 @@ namespace WebApplication
 //            services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
             services.AddSingleton(new CosmosClientBuilder("AccountEndpoint=https://gunners-style.documents.azure.com:443/;AccountKey=IXtgNpP3aCIAxxRHyY85xjzPH4nC4ZcTIQZiOiQXqpHalEvEaqRCqmRaU2TbAuXrPzAT4JkbYxoOWSLhBafVDA==;")
                 .WithConnectionModeDirect()
-                .WithCustomSerializer(new MyCosmosJsonSerializer())
+//                .WithCustomSerializer(new MyCosmosJsonSerializer())
                 .Build());
             //            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
