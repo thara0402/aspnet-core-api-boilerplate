@@ -40,15 +40,10 @@ namespace WebApplication
             services.AddDbContext<Infrastructure.Sql.Models.ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
 
             // Cosmos
-            //var test = new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
-            //    .WithConnectionModeDirect()
-            //    .WithCustomSerializer(new MyCosmosJsonSerializer())
-            //    .Build();
-
-            //services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
-            //    .WithConnectionModeDirect()
-            //    .WithCustomSerializer(new MyCosmosJsonSerializer())
-            //    .Build());
+            services.AddSingleton(new CosmosClientBuilder(Configuration["WebApi:CosmosConnection"])
+                .WithConnectionModeDirect()
+                .WithCustomSerializer(new MyCosmosJsonSerializer())
+                .Build());
             services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>
@@ -85,11 +80,10 @@ namespace WebApplication
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-            app.UseDeveloperExceptionPage();    // dbg
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
