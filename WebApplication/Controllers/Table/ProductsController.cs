@@ -3,15 +3,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Sql;
-using WebApplication.Infrastructure.Sql.Models;
+using WebApplication.Infrastructure.Table;
+using WebApplication.Infrastructure.Table.Models;
 using WebApplication.Models;
 
-namespace WebApplication.Controllers.Sql
+namespace WebApplication.Controllers.Table
 {
-    [ApiExplorerSettings(GroupName = "Products with SQL Database")]
+    [ApiExplorerSettings(GroupName = "Products with Table Storage")]
     [Produces("application/json")]
-    [Route("api/sql/[controller]")]
+    [Route("api/table/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -57,7 +57,7 @@ namespace WebApplication.Controllers.Sql
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductResponse>> Get(string id)
         {
-            var entity = await _repository.GetByIdAsync(long.Parse(id));
+            var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
             {
                 return NotFound();
@@ -83,7 +83,7 @@ namespace WebApplication.Controllers.Sql
             await _repository.InsertAsync(entity);
 
             var response = _mapper.Map<ProductResponse>(entity);
-            return CreatedAtAction(nameof(Get), new { id = response.ProductId }, response);
+            return CreatedAtAction(nameof(Get), new { id = entity.RowKey }, response);
         }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace WebApplication.Controllers.Sql
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Put(string id, [FromBody] ProductRequest product)
         {
-            var entity = await _repository.GetByIdAsync(long.Parse(id));
+            var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
             {
                 return NotFound();
             }
             _mapper.Map(product, entity);
 
-            await _repository.UpdateAsync();
+            await _repository.UpdateAsync(entity);
             return NoContent();
         }
 
@@ -122,7 +122,7 @@ namespace WebApplication.Controllers.Sql
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(string id)
         {
-            var entity = await _repository.GetByIdAsync(long.Parse(id));
+            var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
             {
                 return NotFound();

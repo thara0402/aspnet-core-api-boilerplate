@@ -23,6 +23,7 @@ namespace WebApplication.Controllers
             return Ok(new string[] {
                 _settings.SqlConnection,
                 _settings.CosmosConnection,
+                _settings.StorageConnection,
             });
         }
     }

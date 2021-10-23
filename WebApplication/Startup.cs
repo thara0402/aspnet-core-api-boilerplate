@@ -1,4 +1,5 @@
 using AutoMapper;
+using Azure.Data.Tables;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -45,6 +46,10 @@ namespace WebApplication
                 .WithCustomSerializer(new MyCosmosJsonSerializer())
                 .Build());
             services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
+
+            // Storage
+            services.AddSingleton(new TableClient(Configuration["WebApi:StorageConnection"], "Product"));
+            services.AddTransient<Infrastructure.Table.IProductRepository, Infrastructure.Table.ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
