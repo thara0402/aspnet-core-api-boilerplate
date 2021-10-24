@@ -48,7 +48,7 @@ namespace WebApplication
             services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
             // Storage
-            services.AddSingleton(new TableClient(Configuration["WebApi:StorageConnection"], "Product"));
+            services.AddSingleton(new TableServiceClient(Configuration["WebApi:StorageConnection"]));
             services.AddTransient<Infrastructure.Table.IProductRepository, Infrastructure.Table.ProductRepository>();
 
             var mapperConfig = new MapperConfiguration(mc =>

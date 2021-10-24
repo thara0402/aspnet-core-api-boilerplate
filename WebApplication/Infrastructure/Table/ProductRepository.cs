@@ -10,11 +10,12 @@ namespace WebApplication.Infrastructure.Table
     public class ProductRepository : IProductRepository
     {
         private readonly TableClient _tableClient;
-        private const string PartitionKey = "Product";
+        private const string TableName = "Product";
+        private const string PartitionKey = TableName;
 
-        public ProductRepository(TableClient tableClient)
+        public ProductRepository(TableServiceClient tableServiceClient)
         {
-            _tableClient = tableClient;
+            _tableClient = tableServiceClient.GetTableClient(TableName);
         }
 
         public async Task DeleteAsync(Product product)
