@@ -1,11 +1,11 @@
 using AutoMapper;
 using Azure.Data.Tables;
+using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -37,7 +37,6 @@ namespace WebApplication
             services.Configure<MySettings>(Configuration.GetSection("WebApi"));
 
             // Sql
-            services.AddTransient<Infrastructure.Sql.IProductRepository, Infrastructure.Sql.ProductRepository>();
             services.AddDbContext<Infrastructure.Sql.Models.ShopContext>(options => options.UseSqlServer(Configuration["WebApi:SqlConnection"]));
 
             // Cosmos
@@ -45,12 +44,26 @@ namespace WebApplication
                 .WithConnectionModeDirect()
                 .WithCustomSerializer(new MyCosmosJsonSerializer())
                 .Build());
-            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
 
-            // Storage
+            // Table Storage
             services.AddSingleton(new TableServiceClient(Configuration["WebApi:StorageConnection"]));
-            services.AddTransient<Infrastructure.Table.IProductRepository, Infrastructure.Table.ProductRepository>();
 
+            // Blob Storage
+            var options = new BlobClientOptions
+            (
+                // workaround
+                // https://github.com/Azure/azure-sdk-for-net/issues/14257
+                BlobClientOptions.ServiceVersion.V2020_06_12
+            );
+            services.AddSingleton(new BlobServiceClient(Configuration["WebApi:StorageConnection"], options));
+
+            // Repository
+            services.AddTransient<Infrastructure.Sql.IProductRepository, Infrastructure.Sql.ProductRepository>();
+            services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
+            services.AddTransient<Infrastructure.Table.IProductRepository, Infrastructure.Table.ProductRepository>();
+            services.AddTransient<Infrastructure.IFileRepository, Infrastructure.FileRepository>();
+
+            // AutoMapper
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile<ShopProfile>();
