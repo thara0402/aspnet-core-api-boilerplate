@@ -6,7 +6,7 @@ using Xunit;
 
 namespace WebApplication.Tests
 {
-    public class ValuesControllerTest
+    public class MySettingsControllerTest
     {
         [Fact]
         public void Get_ReturnsOkResult()
@@ -16,7 +16,7 @@ namespace WebApplication.Tests
                 SqlConnection = "SQL Connection for Unit Test."
             };
             IOptions<MySettings> options = Options.Create(settings);
-            var controller = new ValuesController(options);
+            var controller = new MySettingsController(options);
 
             // Act
             var actionResult = controller.Get();

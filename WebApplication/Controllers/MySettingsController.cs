@@ -8,11 +8,11 @@ namespace WebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class MySettingsController : ControllerBase
     {
         private readonly MySettings _settings;
 
-        public ValuesController(IOptions<MySettings> optionsAccessor)
+        public MySettingsController(IOptions<MySettings> optionsAccessor)
         {
             _settings = optionsAccessor.Value;
         }

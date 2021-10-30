@@ -1,6 +1,7 @@
 using AutoMapper;
 using Azure.Data.Tables;
 using Azure.Storage.Blobs;
+using Azure.Storage.Queues;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -57,11 +58,15 @@ namespace WebApplication
             );
             services.AddSingleton(new BlobServiceClient(Configuration["WebApi:StorageConnection"], options));
 
+            // Queue Storage
+            services.AddSingleton(new QueueClient(Configuration["WebApi:StorageConnection"], "sample-queue"));
+
             // Repository
             services.AddTransient<Infrastructure.Sql.IProductRepository, Infrastructure.Sql.ProductRepository>();
             services.AddTransient<Infrastructure.Cosmos.IProductRepository, Infrastructure.Cosmos.ProductRepository>();
             services.AddTransient<Infrastructure.Table.IProductRepository, Infrastructure.Table.ProductRepository>();
             services.AddTransient<Infrastructure.IFileRepository, Infrastructure.FileRepository>();
+            services.AddTransient<Infrastructure.IMessageRepository, Infrastructure.MessageRepository>();
 
             // AutoMapper
             var mapperConfig = new MapperConfiguration(mc =>
