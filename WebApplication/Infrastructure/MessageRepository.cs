@@ -16,8 +16,6 @@ namespace WebApplication.Infrastructure
 
         public async Task<IList<string>> ReceiveAsync()
         {
-            await _queueClient.CreateIfNotExistsAsync();
-
             var result = new List<string>();
             var received = await _queueClient.ReceiveMessagesAsync(10, TimeSpan.FromSeconds(1));
             foreach (var message in received.Value)
@@ -31,8 +29,6 @@ namespace WebApplication.Infrastructure
 
         public async Task SendAsync(string message)
         {
-            await _queueClient.CreateIfNotExistsAsync();
-
             await _queueClient.SendMessageAsync(message);
         }
     }
