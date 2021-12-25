@@ -4,7 +4,7 @@ using Azure.Identity;
 using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
 using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.Azure.Cosmos.Fluent;
+//using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using WebApp;
@@ -27,10 +27,10 @@ builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(build
 
 // Cosmos
 //builder.Services.AddSingleton(new CosmosClientBuilder(builder.Configuration["WebApi:CosmosConnection"])
-builder.Services.AddSingleton(new CosmosClientBuilder("AccountEndpoint=https://test.documents.azure.com:443;AccountKey=test")
-    .WithConnectionModeDirect()
-//    .WithCustomSerializer(new MyCosmosJsonSerializer())
-    .Build());
+//builder.Services.AddSingleton(new CosmosClientBuilder("AccountEndpoint=https://test.documents.azure.com:443;AccountKey=test")
+//    .WithConnectionModeDirect()
+////    .WithCustomSerializer(new MyCosmosJsonSerializer())
+//    .Build());
 
 // Table Storage
 builder.Services.AddSingleton(new TableServiceClient("UseDevelopmentStorage=true"));
@@ -52,7 +52,7 @@ builder.Services.AddSingleton(new QueueClient("UseDevelopmentStorage=true", "sam
 
 // Repository
 builder.Services.AddTransient<WebApp.Infrastructure.Sql.IProductRepository, WebApp.Infrastructure.Sql.ProductRepository>();
-builder.Services.AddTransient<WebApp.Infrastructure.Cosmos.IProductRepository, WebApp.Infrastructure.Cosmos.ProductRepository>();
+//builder.Services.AddTransient<WebApp.Infrastructure.Cosmos.IProductRepository, WebApp.Infrastructure.Cosmos.ProductRepository>();
 builder.Services.AddTransient<WebApp.Infrastructure.Table.IProductRepository, WebApp.Infrastructure.Table.ProductRepository>();
 builder.Services.AddTransient<WebApp.Infrastructure.IFileRepository, WebApp.Infrastructure.FileRepository>();
 builder.Services.AddTransient<WebApp.Infrastructure.IMessageRepository, WebApp.Infrastructure.MessageRepository>();
