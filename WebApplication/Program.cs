@@ -14,11 +14,11 @@ using WebApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-if (!builder.Environment.IsDevelopment())
-{
-    var keyVaultUrl = builder.Configuration["KeyVaultUrl"];
-    builder.Configuration.AddAzureKeyVault(new Uri(keyVaultUrl), new DefaultAzureCredential());
-}
+//if (!builder.Environment.IsDevelopment())
+//{
+//    var keyVaultUrl = builder.Configuration["KeyVaultUrl"];
+//    builder.Configuration.AddAzureKeyVault(new Uri(keyVaultUrl), new DefaultAzureCredential());
+//}
 
 builder.Services.Configure<MySettings>(builder.Configuration.GetSection("WebApi"));
 
