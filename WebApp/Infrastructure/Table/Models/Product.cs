@@ -6,13 +6,13 @@ namespace WebApp.Infrastructure.Table.Models
 {
     public class Product : ITableEntity
     {
-        public string PartitionKey { get; set; }
+        public string PartitionKey { get; set; } = null!;
 
-        public string RowKey { get; set; }
+        public string RowKey { get; set; } = null!;
 
-        public string Desc { get; set; }
+        public string Desc { get; set; } = null!;
 
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
         public double Price { get; set; }
 

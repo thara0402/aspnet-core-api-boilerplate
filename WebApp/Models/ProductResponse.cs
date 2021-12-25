@@ -5,17 +5,17 @@
         /// <summary>
         /// ID
         /// </summary>
-        public string ProductId { get; set; }
+        public string ProductId { get; set; } = null!;
 
         /// <summary>
         /// 説明
         /// </summary>
-        public string Desc { get; set; }
+        public string Desc { get; set; } = null!;
 
         /// <summary>
         /// 商品名
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
         /// <summary>
         /// 価格

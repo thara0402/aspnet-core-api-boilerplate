@@ -8,7 +8,7 @@ namespace WebApp.Infrastructure.Sql
     {
         Task<IList<Product>> GetAsync();
 
-        Task<Product> GetByIdAsync(long? id);
+        Task<Product?> GetByIdAsync(long? id);
 
         Task InsertAsync(Product product);
 

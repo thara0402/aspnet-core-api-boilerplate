@@ -4,7 +4,7 @@ namespace WebApp.Models
 {
     public class UploadRequest
     {
-        public string FileName { get; set; }
-        public IFormFile File { get; set; }
+        public string FileName { get; set; } = null!;
+        public IFormFile File { get; set; } = null!;
     }
 }

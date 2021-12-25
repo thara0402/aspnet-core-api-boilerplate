@@ -9,14 +9,14 @@ namespace WebApp.Models
         /// </summary>
         [Required]
         [StringLength(256)]
-        public string Desc { get; set; }
+        public string Desc { get; set; } = null!;
 
         /// <summary>
         /// 商品名
         /// </summary>
         [Required]
         [StringLength(256)]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
         /// <summary>
         /// 価格

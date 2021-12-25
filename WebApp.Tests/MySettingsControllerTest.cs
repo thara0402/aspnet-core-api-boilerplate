@@ -23,7 +23,7 @@ namespace WebApp.Tests
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(actionResult.Result);
-            Assert.Equal(settings.SqlConnection, (result.Value as string[])[0]);
+            Assert.Equal(settings.SqlConnection, (result.Value as string[])![0]);
         }
     }
 }

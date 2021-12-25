@@ -20,7 +20,7 @@ namespace WebApp.Infrastructure.Sql
             return await _context.Products.OrderBy(product => product.Name).ToListAsync();
         }
 
-        public async Task<Product> GetByIdAsync(long? id)
+        public async Task<Product?> GetByIdAsync(long? id)
         {
             return await _context.Products.FirstOrDefaultAsync(product => product.ProductId == id);
         }
@@ -46,7 +46,10 @@ namespace WebApp.Infrastructure.Sql
                     foreach (var entry in ex.Entries)
                     {
                         var databaseValues = entry.GetDatabaseValues();
-                        entry.OriginalValues.SetValues(databaseValues);
+                        if (databaseValues != null)
+                        {
+                            entry.OriginalValues.SetValues(databaseValues);
+                        }
                     }
                 }
             }
