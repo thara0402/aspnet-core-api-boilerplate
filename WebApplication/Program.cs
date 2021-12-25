@@ -99,7 +99,8 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler("/error");
+    app.UseDeveloperExceptionPage();
+//    app.UseExceptionHandler("/error");
 }
 
 app.UseSwagger();
