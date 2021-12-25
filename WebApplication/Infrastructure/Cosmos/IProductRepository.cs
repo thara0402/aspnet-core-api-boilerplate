@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Cosmos.Models;
+using WebApp.Infrastructure.Cosmos.Models;
 
-namespace WebApplication.Infrastructure.Cosmos
+namespace WebApp.Infrastructure.Cosmos
 {
     public interface IProductRepository
     {

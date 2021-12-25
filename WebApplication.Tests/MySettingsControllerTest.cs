@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System;
-using WebApplication.Controllers;
+using WebApp.Controllers;
 using Xunit;
 
-namespace WebApplication.Tests
+namespace WebApp.Tests
 {
     public class MySettingsControllerTest
     {
@@ -23,7 +23,7 @@ namespace WebApplication.Tests
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(actionResult.Result);
-            Assert.Equal(settings.SqlConnection, result.Value as string);
+            Assert.Equal(settings.SqlConnection, (result.Value as string[])[0]);
         }
     }
 }

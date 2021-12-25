@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using System;
 
-namespace WebApplication.Models
+namespace WebApp.Models
 {
     public class ShopProfile : Profile
     {

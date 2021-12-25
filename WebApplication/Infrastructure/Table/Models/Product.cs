@@ -2,7 +2,7 @@
 using Azure.Data.Tables;
 using System;
 
-namespace WebApplication.Infrastructure.Table.Models
+namespace WebApp.Infrastructure.Table.Models
 {
     public class Product : ITableEntity
     {

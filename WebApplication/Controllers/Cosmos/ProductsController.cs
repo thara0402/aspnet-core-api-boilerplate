@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Cosmos;
-using WebApplication.Infrastructure.Cosmos.Models;
-using WebApplication.Models;
+using WebApp.Infrastructure.Cosmos;
+using WebApp.Infrastructure.Cosmos.Models;
+using WebApp.Models;
 
-namespace WebApplication.Controllers.Cosmos
+namespace WebApp.Controllers.Cosmos
 {
     [ApiExplorerSettings(GroupName = "Products with Cosmos DB")]
     [Produces("application/json")]

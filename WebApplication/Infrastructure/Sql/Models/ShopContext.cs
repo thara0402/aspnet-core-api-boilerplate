@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace WebApplication.Infrastructure.Sql.Models
+namespace WebApp.Infrastructure.Sql.Models
 {
     public partial class ShopContext : DbContext
     {

@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Cosmos.Models;
+using WebApp.Infrastructure.Cosmos.Models;
 
-namespace WebApplication.Infrastructure.Cosmos
+namespace WebApp.Infrastructure.Cosmos
 {
     public class ProductRepository : IProductRepository
     {

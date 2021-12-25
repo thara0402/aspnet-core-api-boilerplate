@@ -4,7 +4,7 @@ using Newtonsoft.Json.Serialization;
 using System.IO;
 using System.Text;
 
-namespace WebApplication.Infrastructure.Cosmos.Models
+namespace WebApp.Infrastructure.Cosmos.Models
 {
     public class MyCosmosJsonSerializer : CosmosSerializer
     {

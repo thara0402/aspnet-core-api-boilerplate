@@ -1,4 +1,4 @@
-﻿namespace WebApplication.Models
+﻿namespace WebApp.Models
 {
     public class ProductResponse
     {

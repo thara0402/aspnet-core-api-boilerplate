@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Table;
-using WebApplication.Infrastructure.Table.Models;
-using WebApplication.Models;
+using WebApp.Infrastructure.Table;
+using WebApp.Infrastructure.Table.Models;
+using WebApp.Models;
 
-namespace WebApplication.Controllers.Table
+namespace WebApp.Controllers.Table
 {
     [ApiExplorerSettings(GroupName = "Products with Table Storage")]
     [Produces("application/json")]

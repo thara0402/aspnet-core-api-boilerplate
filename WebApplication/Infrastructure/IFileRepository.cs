@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace WebApplication.Infrastructure
+namespace WebApp.Infrastructure
 {
     public interface IFileRepository
     {

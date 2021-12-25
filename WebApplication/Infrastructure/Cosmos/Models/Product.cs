@@ -1,4 +1,4 @@
-﻿namespace WebApplication.Infrastructure.Cosmos.Models
+﻿namespace WebApp.Infrastructure.Cosmos.Models
 {
     public class Product
     {

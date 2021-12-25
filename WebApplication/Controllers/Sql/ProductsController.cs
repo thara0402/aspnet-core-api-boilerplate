@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Sql;
-using WebApplication.Infrastructure.Sql.Models;
-using WebApplication.Models;
+using WebApp.Infrastructure.Sql;
+using WebApp.Infrastructure.Sql.Models;
+using WebApp.Models;
 
-namespace WebApplication.Controllers.Sql
+namespace WebApp.Controllers.Sql
 {
     [ApiExplorerSettings(GroupName = "Products with SQL Database")]
     [Produces("application/json")]

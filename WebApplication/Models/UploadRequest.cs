@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace WebApplication.Models
+namespace WebApp.Models
 {
     public class UploadRequest
     {

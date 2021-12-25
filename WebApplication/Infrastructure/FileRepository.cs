@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace WebApplication.Infrastructure
+namespace WebApp.Infrastructure
 {
     public class FileRepository : IFileRepository
     {

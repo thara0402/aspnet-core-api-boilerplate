@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.Models
+namespace WebApp.Models
 {
     public class ProductRequest
     {

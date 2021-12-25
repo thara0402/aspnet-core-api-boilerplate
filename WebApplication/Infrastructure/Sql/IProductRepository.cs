@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure.Sql.Models;
+using WebApp.Infrastructure.Sql.Models;
 
-namespace WebApplication.Infrastructure.Sql
+namespace WebApp.Infrastructure.Sql
 {
     public interface IProductRepository
     {

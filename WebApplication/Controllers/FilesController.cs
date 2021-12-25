@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApplication.Infrastructure;
-using WebApplication.Models;
+using WebApp.Infrastructure;
+using WebApp.Models;
 
-namespace WebApplication.Controllers
+namespace WebApp.Controllers
 {
     [Route("api/[controller]")]
     [Produces("application/json")]
