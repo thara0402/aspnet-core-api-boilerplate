@@ -14,11 +14,11 @@ using WebApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//if (!builder.Environment.IsDevelopment())
-//{
-//    var keyVaultUrl = builder.Configuration["KeyVaultUrl"];
-//    builder.Configuration.AddAzureKeyVault(new Uri(keyVaultUrl), new DefaultAzureCredential());
-//}
+if (!builder.Environment.IsDevelopment())
+{
+    var keyVaultUrl = builder.Configuration["KeyVaultUrl"];
+    builder.Configuration.AddAzureKeyVault(new Uri(keyVaultUrl), new DefaultAzureCredential());
+}
 
 builder.Services.Configure<MySettings>(builder.Configuration.GetSection("WebApi"));
 
@@ -33,8 +33,7 @@ builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(build
 //    .Build());
 
 // Table Storage
-builder.Services.AddSingleton(new TableServiceClient("UseDevelopmentStorage=true"));
-//builder.Services.AddSingleton(new TableServiceClient(builder.Configuration["WebApi:StorageConnection"]));
+builder.Services.AddSingleton(new TableServiceClient(builder.Configuration["WebApi:StorageConnection"]));
 
 // Blob Storage
 var options = new BlobClientOptions
@@ -43,12 +42,10 @@ var options = new BlobClientOptions
     // https://github.com/Azure/azure-sdk-for-net/issues/14257
     BlobClientOptions.ServiceVersion.V2020_06_12
 );
-//builder.Services.AddSingleton(new BlobServiceClient(builder.Configuration["WebApi:StorageConnection"], options));
-builder.Services.AddSingleton(new BlobServiceClient("UseDevelopmentStorage=true", options));
+builder.Services.AddSingleton(new BlobServiceClient(builder.Configuration["WebApi:StorageConnection"], options));
 
 // Queue Storage
-//builder.Services.AddSingleton(new QueueClient(builder.Configuration["WebApi:StorageConnection"], "sample-queue"));
-builder.Services.AddSingleton(new QueueClient("UseDevelopmentStorage=true", "sample-queue"));
+builder.Services.AddSingleton(new QueueClient(builder.Configuration["WebApi:StorageConnection"], "sample-queue"));
 
 // Repository
 builder.Services.AddTransient<WebApp.Infrastructure.Sql.IProductRepository, WebApp.Infrastructure.Sql.ProductRepository>();
@@ -99,8 +96,7 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseDeveloperExceptionPage();
-//    app.UseExceptionHandler("/error");
+    app.UseExceptionHandler("/error");
 }
 
 app.UseSwagger();
