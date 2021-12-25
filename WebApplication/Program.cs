@@ -29,7 +29,7 @@ builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(build
 //builder.Services.AddSingleton(new CosmosClientBuilder(builder.Configuration["WebApi:CosmosConnection"])
 builder.Services.AddSingleton(new CosmosClientBuilder("AccountEndpoint=https://test.documents.azure.com:443;AccountKey=test")
     .WithConnectionModeDirect()
-    .WithCustomSerializer(new MyCosmosJsonSerializer())
+//    .WithCustomSerializer(new MyCosmosJsonSerializer())
     .Build());
 
 // Table Storage
