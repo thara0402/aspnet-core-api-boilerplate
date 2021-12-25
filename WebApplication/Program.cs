@@ -26,13 +26,15 @@ builder.Services.Configure<MySettings>(builder.Configuration.GetSection("WebApi"
 builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration["WebApi:SqlConnection"]));
 
 // Cosmos
-builder.Services.AddSingleton(new CosmosClientBuilder(builder.Configuration["WebApi:CosmosConnection"])
+//builder.Services.AddSingleton(new CosmosClientBuilder(builder.Configuration["WebApi:CosmosConnection"])
+builder.Services.AddSingleton(new CosmosClientBuilder("AccountEndpoint=https://test.documents.azure.com:443;AccountKey=test")
     .WithConnectionModeDirect()
     .WithCustomSerializer(new MyCosmosJsonSerializer())
     .Build());
 
 // Table Storage
-builder.Services.AddSingleton(new TableServiceClient(builder.Configuration["WebApi:StorageConnection"]));
+builder.Services.AddSingleton(new TableServiceClient("UseDevelopmentStorage=true"));
+//builder.Services.AddSingleton(new TableServiceClient(builder.Configuration["WebApi:StorageConnection"]));
 
 // Blob Storage
 var options = new BlobClientOptions
@@ -41,10 +43,12 @@ var options = new BlobClientOptions
     // https://github.com/Azure/azure-sdk-for-net/issues/14257
     BlobClientOptions.ServiceVersion.V2020_06_12
 );
-builder.Services.AddSingleton(new BlobServiceClient(builder.Configuration["WebApi:StorageConnection"], options));
+//builder.Services.AddSingleton(new BlobServiceClient(builder.Configuration["WebApi:StorageConnection"], options));
+builder.Services.AddSingleton(new BlobServiceClient("UseDevelopmentStorage=true", options));
 
 // Queue Storage
-builder.Services.AddSingleton(new QueueClient(builder.Configuration["WebApi:StorageConnection"], "sample-queue"));
+//builder.Services.AddSingleton(new QueueClient(builder.Configuration["WebApi:StorageConnection"], "sample-queue"));
+builder.Services.AddSingleton(new QueueClient("UseDevelopmentStorage=true", "sample-queue"));
 
 // Repository
 builder.Services.AddTransient<WebApp.Infrastructure.Sql.IProductRepository, WebApp.Infrastructure.Sql.ProductRepository>();
