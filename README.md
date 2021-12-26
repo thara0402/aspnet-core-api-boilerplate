@@ -1,6 +1,6 @@
 # ASP.NET Core Web API Boilerplate
 
-[![Build](https://github.com/thara0402/aspnet-core-api-boilerplate/actions/workflows/main_gunners-style-api.yml/badge.svg)](https://github.com/thara0402/aspnet-core-api-boilerplate/actions/workflows/main_gunners-style-api.yml)
+[![Build and deploy](https://github.com/thara0402/aspnet-core-api-boilerplate/actions/workflows/main_gunners-style-api.yml/badge.svg)](https://github.com/thara0402/aspnet-core-api-boilerplate/actions/workflows/main_gunners-style-api.yml)
 
 ## Secret Manager
 
