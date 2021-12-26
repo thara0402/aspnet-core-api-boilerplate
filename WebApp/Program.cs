@@ -16,11 +16,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (!builder.Environment.IsDevelopment())
 {
-    var keyVaultUrl = builder.Configuration["KeyVaultUrl"];
-    builder.Configuration.AddAzureKeyVault(new Uri(keyVaultUrl), new DefaultAzureCredential());
+    builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["KeyVaultUrl"]), new DefaultAzureCredential());
 }
 
 builder.Services.Configure<MySettings>(builder.Configuration.GetSection("WebApi"));
+
+// Application Insights
+builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["WebApi:AppInsightsInstrumentationKey"]);
 
 // Sql
 builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration["WebApi:SqlConnection"]));

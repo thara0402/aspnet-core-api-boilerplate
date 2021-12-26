@@ -6,6 +6,7 @@
 ```json
 {
   "WebApi": {
+    "AppInsightsInstrumentationKey": "AppInsights InstrumentationKey for Secret Manager.",
     "SqlConnection": "SQL Connection for Secret Manager.",
     "CosmosConnection": "Cosmos Connection for Secret Manager.",
     "StorageConnection": "UseDevelopmentStorage=true"
