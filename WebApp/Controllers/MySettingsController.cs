@@ -25,6 +25,7 @@ namespace WebApp.Controllers
                 _settings.SqlConnection,
                 _settings.CosmosConnection,
                 _settings.StorageConnection,
+                _settings.AppInsightsInstrumentationKey,
             });
         }
     }
