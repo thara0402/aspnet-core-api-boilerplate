@@ -3,6 +3,7 @@ using Azure.Data.Tables;
 using Azure.Identity;
 using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.EntityFrameworkCore;
@@ -16,13 +17,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (!builder.Environment.IsDevelopment())
 {
-    builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["KeyVaultUrl"]), new DefaultAzureCredential());
+    builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["KeyVaultUrl"] ?? ""), new DefaultAzureCredential());
 }
 
 builder.Services.Configure<MySettings>(builder.Configuration.GetSection("WebApi"));
 
 // Application Insights
-builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["WebApi:AppInsightsInstrumentationKey"]);
+builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions { ConnectionString = builder.Configuration["WebApi:ConnectionString"] });
 
 // Sql
 builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration["WebApi:SqlConnection"]));
