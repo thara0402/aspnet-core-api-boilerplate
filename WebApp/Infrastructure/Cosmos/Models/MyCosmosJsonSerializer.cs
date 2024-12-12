@@ -29,7 +29,12 @@ namespace WebApp.Infrastructure.Cosmos.Models
                 {
                     using (JsonTextReader jsonTextReader = new JsonTextReader(sr))
                     {
-                        return Serializer.Deserialize<T>(jsonTextReader);
+                        T? result = Serializer.Deserialize<T>(jsonTextReader);
+                        if (result == null)
+                        {
+                            throw new InvalidOperationException("Deserialization returned null.");
+                        }
+                        return result;
                     }
                 }
             }
