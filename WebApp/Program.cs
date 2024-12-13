@@ -75,13 +75,13 @@ builder.Services.AddSwaggerGen(c =>
     {
         if (api.GroupName != null)
         {
-            return new[] { api.GroupName };
+            return [api.GroupName];
         }
 
         var controllerActionDescriptor = api.ActionDescriptor as ControllerActionDescriptor;
         if (controllerActionDescriptor != null)
         {
-            return new[] { controllerActionDescriptor.ControllerName };
+            return [controllerActionDescriptor.ControllerName];
         }
 
         throw new InvalidOperationException("Unable to determine tag for endpoint.");
@@ -105,7 +105,6 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
-    c.RoutePrefix = string.Empty;
 });
 
 app.UseHttpsRedirection();
