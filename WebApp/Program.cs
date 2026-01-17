@@ -7,7 +7,7 @@ using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using WebApp;
 using WebApp.Infrastructure.Cosmos.Models;
 using WebApp.Infrastructure.Sql.Models;
@@ -101,7 +101,10 @@ else
     app.UseExceptionHandler("/error");
 }
 
-app.UseSwagger();
+app.UseSwagger(c =>
+{
+    c.OpenApiVersion = OpenApiSpecVersion.OpenApi3_1;
+});
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
