@@ -1,0 +1,13 @@
+# 03-openapi-and-remaining-packages: Upgrade OpenAPI and remaining packages
+
+Update the remaining assessed references in `WebApp.csproj`: AutoMapper (17.0.0), Microsoft.EntityFrameworkCore.SqlServer (11.0.0), Microsoft.EntityFrameworkCore.Tools (11.0.0), Microsoft.OpenApi (3.11.1), Newtonsoft.Json (13.0.4), and Swashbuckle.AspNetCore (11.0.1). Preserve the existing EF Tools asset settings. No source-breaking changes were reported for AutoMapper, EF Core, Newtonsoft.Json, or Swashbuckle.AspNetCore. For Microsoft.OpenApi, migrate affected content dictionaries and callers to the `IOpenApiMediaType` API, replace removed `Content` setters as needed, and address removed `OpenApiXml.Attribute` / `Wrapped` members, following [Microsoft.OpenApi.apidiff.md](../../apidiff/Microsoft.OpenApi.apidiff.md). Verify the OpenAPI/Swashbuckle combination together.
+
+**Done when**: All six references match their recommended versions, applicable Microsoft.OpenApi usages compile against the new signatures, and `WebApp` restores and builds.
+
+## Execution research (confirmed before source edits)
+
+- Scope is the single SDK-style project `WebApp/WebApp.csproj`, targeting `net11.0`; there is no `Directory.Packages.props` or other project under `WebApp`.
+- `get_project_dependencies` confirms all six package versions are defined directly in `WebApp/WebApp.csproj`. At task entry, AutoMapper 17.0.0, EF Core SqlServer 11.0.0, EF Tools 11.0.0, and Newtonsoft.Json 13.0.4 already match their targets. Microsoft.OpenApi is 2.7.5 (target 3.11.1), and Swashbuckle.AspNetCore is 10.1.0 (target 11.0.1). EF Tools has `PrivateAssets=all` and `IncludeAssets=runtime; build; native; contentfiles; analyzers; buildtransitive`; preserve both.
+- Source inventory found OpenAPI references only in `WebApp/Program.cs` (`using Microsoft.OpenApi`, `OpenApiInfo`, and `OpenApiSpecVersion`). Searches across project source found no `OpenApiMediaType`-typed content dictionary, `Content` object initializer/setter, `OpenApiXml`, `.Attribute`, or `.Wrapped` usage. Therefore the listed Microsoft.OpenApi breaking changes have no additional call sites to migrate; verify through restore/build together with Swashbuckle.
+- API-change guidance is from `../../apidiff/Microsoft.OpenApi.apidiff.md`; the task says the other four upgraded packages have no source-breaking API changes. Apply only the two outstanding package version changes unless compiler validation identifies an actual compatibility issue.
+- Decomposition verdict: atomic — one project, one package-reference group and any required compatibility adjustments are coupled by the required WebApp build; no independent layer or validation boundary warrants a split.
