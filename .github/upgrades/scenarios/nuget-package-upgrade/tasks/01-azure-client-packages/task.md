@@ -1,0 +1,13 @@
+# 01-azure-client-packages: Upgrade Azure client packages
+
+Update the `WebApp` package references for Azure.Data.Tables (12.13.0), Azure.Extensions.AspNetCore.Configuration.Secrets (1.5.2), Azure.Identity (1.21.0), Azure.Storage.Blobs (12.30.2), Azure.Storage.Queues (12.28.2), and Microsoft.Azure.Cosmos (3.64.0) in `WebApp.csproj`. The assessment reports no source-breaking changes for the table, secrets, blob, queue, and Cosmos packages. For Azure.Identity, migrate any actual usages of the 55 types reported removed in [Azure.Identity.apidiff.md](apidiff/Azure.Identity.apidiff.md); quick assessment did not identify call sites, so use build feedback to locate affected code and verify whether reported removals are used.
+
+**Done when**: All six package references match their recommended versions, applicable Azure.Identity usages compile against the new API, and `WebApp` restores and builds.
+
+## Execution research (confirmed before source changes)
+
+- Scope is the single SDK-style project `WebApp/WebApp.csproj` in `aspnet-core-api-boilerplate.sln`, targeting `net11.0`. `get_project_dependencies` confirms the six package references are defined directly in `WebApp/WebApp.csproj`; the repository uses no `Directory.Packages.props` / Central Package Management.
+- Current → target versions confirmed in the project file and assessment: Azure.Data.Tables 12.11.0 → 12.13.0; Azure.Extensions.AspNetCore.Configuration.Secrets 1.4.0 → 1.5.2; Azure.Identity 1.17.1 → 1.21.0; Azure.Storage.Blobs 12.27.0 → 12.30.2; Azure.Storage.Queues 12.25.0 → 12.28.2; Microsoft.Azure.Cosmos 3.56.0 → 3.64.0.
+- The package API diffs for tables, secrets, blobs, queues, and Cosmos report no source-breaking API changes. The Azure.Identity diff reports 55 removed types. Searching the `WebApp` C# sources for those diff type names found one affected API usage: `Program.cs` constructs `DefaultAzureCredential` (`using Azure.Identity;`). The remaining removed-type names had no matches.
+- Execution environment has .NET SDK 11.0.100 / MSBuild 18.12.2 installed. The project is SDK-style and targets only modern .NET; use `dotnet restore` and `dotnet build` as the targeted validation path.
+- Decomposition verdict: **atomic**. This task updates one project’s six package versions and validates one directly related Azure.Identity call site; there are no independent projects, layers, or staged validation gates. Evaluated the scenario `Execution` stage (`execution.md`) and its inline “Decomposition hints”; no separate Breakdown Hints files are indexed. The `Execution` scenario-extension query reported that none apply.
