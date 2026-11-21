@@ -1,0 +1,386 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": ""
+  },
+  "analysisStartTime": "2026-11-21T07:36:22.9604308Z",
+  "analysisEndTime": "2026-11-21T07:36:37.3290612Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 1,
+      "incidents": 13,
+      "effort": 0
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 0,
+        "Optional": 0,
+        "Potential": 0,
+        "Information": 13
+      },
+      "category": {
+        "Pkg": 13
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "WebApp\\WebApp.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "WebApp",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 34,
+        "numberOfCodeFiles": 32,
+        "linesTotal": 1533,
+        "linesOfCode": 1515,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "26fe7771-226d-4b90-a3b1-87abc4bc6fd4",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027AutoMapper\u0027 17.0.0 (included in this upgrade).",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoMapper, 17.0.0",
+              "protected": "AutoMapper, 17.0.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "AutoMapper, 17.0.0",
+            "protectedSnippet": "AutoMapper, 17.0.0",
+            "label": "AutoMapper 17.0.0",
+            "properties": {
+              "PackageId": "AutoMapper",
+              "PackageVersion": "17.0.0",
+              "PackageNewVersion": "17.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5c994bdd-e337-47dc-b09d-95ac31a6314e",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Azure.Data.Tables\u0027 12.11.0; proposed upgrade to 12.13.0.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Data.Tables, 12.11.0",
+              "protected": "Azure.Data.Tables, 12.11.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Azure.Data.Tables, 12.11.0",
+            "protectedSnippet": "Azure.Data.Tables, 12.11.0",
+            "label": "Azure.Data.Tables 12.11.0",
+            "properties": {
+              "PackageId": "Azure.Data.Tables",
+              "PackageVersion": "12.11.0",
+              "PackageNewVersion": "12.13.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e149999d-de25-4283-a4c9-ea3815066734",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Azure.Extensions.AspNetCore.Configuration.Secrets\u0027 1.4.0; proposed upgrade to 1.5.2.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Extensions.AspNetCore.Configuration.Secrets, 1.4.0",
+              "protected": "Azure.Extensions.AspNetCore.Configuration.Secrets, 1.4.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Azure.Extensions.AspNetCore.Configuration.Secrets, 1.4.0",
+            "protectedSnippet": "Azure.Extensions.AspNetCore.Configuration.Secrets, 1.4.0",
+            "label": "Azure.Extensions.AspNetCore.Configuration.Secrets 1.4.0",
+            "properties": {
+              "PackageId": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+              "PackageVersion": "1.4.0",
+              "PackageNewVersion": "1.5.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "c8fe076d-e74c-430d-8df6-864a3d72764c",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Azure.Identity\u0027 1.17.1; proposed upgrade to 1.21.0.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Identity, 1.17.1",
+              "protected": "Azure.Identity, 1.17.1"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Azure.Identity, 1.17.1",
+            "protectedSnippet": "Azure.Identity, 1.17.1",
+            "label": "Azure.Identity 1.17.1",
+            "properties": {
+              "PackageId": "Azure.Identity",
+              "PackageVersion": "1.17.1",
+              "PackageNewVersion": "1.21.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "19172775-abd0-4e19-a6cf-a5069fba1ea7",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Azure.Storage.Blobs\u0027 12.27.0; proposed upgrade to 12.30.2.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Storage.Blobs, 12.27.0",
+              "protected": "Azure.Storage.Blobs, 12.27.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Azure.Storage.Blobs, 12.27.0",
+            "protectedSnippet": "Azure.Storage.Blobs, 12.27.0",
+            "label": "Azure.Storage.Blobs 12.27.0",
+            "properties": {
+              "PackageId": "Azure.Storage.Blobs",
+              "PackageVersion": "12.27.0",
+              "PackageNewVersion": "12.30.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4458e44a-8a3b-4500-9aff-460e10bd9021",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Azure.Storage.Queues\u0027 12.25.0; proposed upgrade to 12.28.2.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Storage.Queues, 12.25.0",
+              "protected": "Azure.Storage.Queues, 12.25.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Azure.Storage.Queues, 12.25.0",
+            "protectedSnippet": "Azure.Storage.Queues, 12.25.0",
+            "label": "Azure.Storage.Queues 12.25.0",
+            "properties": {
+              "PackageId": "Azure.Storage.Queues",
+              "PackageVersion": "12.25.0",
+              "PackageNewVersion": "12.28.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "37d9388d-3b04-44fc-a4c8-eb8a9dbfee7d",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.ApplicationInsights.AspNetCore\u0027 2.23.0; proposed upgrade to 3.2.0.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0",
+              "protected": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0",
+            "protectedSnippet": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0",
+            "label": "Microsoft.ApplicationInsights.AspNetCore 2.23.0",
+            "properties": {
+              "PackageId": "Microsoft.ApplicationInsights.AspNetCore",
+              "PackageVersion": "2.23.0",
+              "PackageNewVersion": "3.2.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "860976b8-9a6f-4546-835f-63323e32c346",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Azure.Cosmos\u0027 3.56.0; proposed upgrade to 3.64.0.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Azure.Cosmos, 3.56.0",
+              "protected": "Microsoft.Azure.Cosmos, 3.56.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.Azure.Cosmos, 3.56.0",
+            "protectedSnippet": "Microsoft.Azure.Cosmos, 3.56.0",
+            "label": "Microsoft.Azure.Cosmos 3.56.0",
+            "properties": {
+              "PackageId": "Microsoft.Azure.Cosmos",
+              "PackageVersion": "3.56.0",
+              "PackageNewVersion": "3.64.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ae304787-7372-4f5f-86a4-f1dbeddbde77",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.EntityFrameworkCore.SqlServer\u0027 11.0.0 (included in this upgrade).",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 11.0.0",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 11.0.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 11.0.0",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 11.0.0",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 11.0.0",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "11.0.0",
+              "PackageNewVersion": "11.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5c9e8bf8-d504-4534-bb45-9ca28ab2b5d2",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.EntityFrameworkCore.Tools\u0027 11.0.0 (included in this upgrade).",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 11.0.0",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 11.0.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 11.0.0",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 11.0.0",
+            "label": "Microsoft.EntityFrameworkCore.Tools 11.0.0",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "11.0.0",
+              "PackageNewVersion": "11.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5b46bebe-cb45-4c0f-b669-361efd0e7aa3",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.OpenApi\u0027 2.7.5; proposed upgrade to 3.11.1.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.OpenApi, 2.7.5",
+              "protected": "Microsoft.OpenApi, 2.7.5"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.OpenApi, 2.7.5",
+            "protectedSnippet": "Microsoft.OpenApi, 2.7.5",
+            "label": "Microsoft.OpenApi 2.7.5",
+            "properties": {
+              "PackageId": "Microsoft.OpenApi",
+              "PackageVersion": "2.7.5",
+              "PackageNewVersion": "3.11.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "31bee360-8cca-438f-a28e-f5a2612f2b0e",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Newtonsoft.Json\u0027 13.0.4 (included in this upgrade).",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.4"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.4",
+            "label": "Newtonsoft.Json 13.0.4",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.4",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b51ab44e-2ba9-4690-9c96-ea82306b7d4b",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Swashbuckle.AspNetCore\u0027 10.1.0; proposed upgrade to 11.0.1.",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Swashbuckle.AspNetCore, 10.1.0",
+              "protected": "Swashbuckle.AspNetCore, 10.1.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Swashbuckle.AspNetCore, 10.1.0",
+            "protectedSnippet": "Swashbuckle.AspNetCore, 10.1.0",
+            "label": "Swashbuckle.AspNetCore 10.1.0",
+            "properties": {
+              "PackageId": "Swashbuckle.AspNetCore",
+              "PackageVersion": "10.1.0",
+              "PackageNewVersion": "11.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Pkg.0001": {
+      "id": "Pkg.0001",
+      "isFeature": false,
+      "description": "Project references a package included in this upgrade.\n\nThe project references one of the packages being upgraded. This finding records the reference (current and proposed version) so the assessment lists every affected project even when no breaking API changes were detected.",
+      "label": "Project references an upgraded package",
+      "severity": "Information",
+      "effort": 0
+    }
+  }
+}

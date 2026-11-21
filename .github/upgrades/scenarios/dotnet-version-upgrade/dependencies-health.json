@@ -1,0 +1,429 @@
+{
+  "packageGovernance": {
+    "totalDistinctPackages": 12,
+    "totalVersionDriftInstances": 0,
+    "targetFramework": "net11.0",
+    "packages": [
+      {
+        "name": "AutoMapper",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "17.0.0",
+        "isCompatible": true,
+        "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306B\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u306E\u8106\u5F31\u6027\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059",
+        "versions": [
+          {
+            "version": "14.0.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "17.0.0"
+        }
+      },
+      {
+        "name": "Azure.Data.Tables",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "12.11.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "12.11.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.4.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.4.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Azure.Identity",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.17.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.17.1",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Azure.Storage.Blobs",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "12.27.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "12.27.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Azure.Storage.Queues",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "12.25.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "12.25.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.ApplicationInsights.AspNetCore",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.23.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.23.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Azure.Cosmos",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "3.56.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "3.56.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.SqlServer",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "11.0.0",
+        "isCompatible": true,
+        "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3092\u304A\u3059\u3059\u3081\u3057\u307E\u3059",
+        "versions": [
+          {
+            "version": "10.0.2",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "11.0.0"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Tools",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "11.0.0",
+        "isCompatible": true,
+        "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3092\u304A\u3059\u3059\u3081\u3057\u307E\u3059",
+        "versions": [
+          {
+            "version": "10.0.2",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "11.0.0"
+        }
+      },
+      {
+        "name": "Newtonsoft.Json",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "13.0.4",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "13.0.4",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Swashbuckle.AspNetCore",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.1.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "10.1.0",
+            "projects": [
+              "WebApp"
+            ],
+            "isRecommended": true
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "WebApp",
+      "path": "WebApp\\WebApp.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net10.0"
+      ],
+      "targetFramework": "net11.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "AutoMapper",
+            "version": "14.0.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306B\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u306E\u8106\u5F31\u6027\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059",
+            "compatibility": "valid",
+            "recommendedVersion": "17.0.0",
+            "upgrade": {
+              "newVersion": "17.0.0"
+            }
+          },
+          {
+            "name": "Azure.Data.Tables",
+            "version": "12.11.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+            "version": "1.4.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Azure.Identity",
+            "version": "1.17.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Azure.Storage.Blobs",
+            "version": "12.27.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Azure.Storage.Queues",
+            "version": "12.25.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.ApplicationInsights.AspNetCore",
+            "version": "2.23.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.Azure.Cosmos",
+            "version": "3.56.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.SqlServer",
+            "version": "10.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3092\u304A\u3059\u3059\u3081\u3057\u307E\u3059",
+            "compatibility": "valid",
+            "recommendedVersion": "11.0.0",
+            "upgrade": {
+              "newVersion": "11.0.0"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Tools",
+            "version": "10.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3092\u304A\u3059\u3059\u3081\u3057\u307E\u3059",
+            "compatibility": "valid",
+            "recommendedVersion": "11.0.0",
+            "upgrade": {
+              "newVersion": "11.0.0"
+            }
+          },
+          {
+            "name": "Newtonsoft.Json",
+            "version": "13.0.4",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Swashbuckle.AspNetCore",
+            "version": "10.1.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "WebApp\\WebApp.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    }
+  ]
+}
