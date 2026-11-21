@@ -7,6 +7,7 @@ using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using WebApp;
 using WebApp.Infrastructure.Cosmos.Models;
@@ -57,12 +58,15 @@ builder.Services.AddTransient<WebApp.Infrastructure.IFileRepository, WebApp.Infr
 builder.Services.AddTransient<WebApp.Infrastructure.IMessageRepository, WebApp.Infrastructure.MessageRepository>();
 
 // AutoMapper
-var mapperConfig = new MapperConfiguration(mc =>
+builder.Services.AddSingleton<IMapper>(serviceProvider =>
 {
-    mc.AddProfile<ShopProfile>();
+    var mapperConfig = new MapperConfiguration(mc =>
+    {
+        mc.AddProfile<ShopProfile>();
+    }, serviceProvider.GetRequiredService<ILoggerFactory>());
+
+    return mapperConfig.CreateMapper();
 });
-IMapper mapper = mapperConfig.CreateMapper();
-builder.Services.AddSingleton(mapper);
 
 // API Controller
 builder.Services.AddControllers();
