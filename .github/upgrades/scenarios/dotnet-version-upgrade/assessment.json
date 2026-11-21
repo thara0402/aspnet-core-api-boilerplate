@@ -1,0 +1,1663 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net11.0",
+    "targetDisplayName": ".NETCoreApp,Version=v11.0"
+  },
+  "analysisStartTime": "2026-11-21T06:43:49.4171865Z",
+  "analysisEndTime": "2026-11-21T06:43:54.8615119Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 5,
+      "incidents": 52,
+      "effort": 52
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 2,
+        "Optional": 1,
+        "Potential": 49,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 3,
+        "Project": 1,
+        "Api": 48
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "WebApp\\WebApp.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 52,
+      "properties": {
+        "appName": "WebApp",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net10.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 34,
+        "numberOfCodeFiles": 32,
+        "linesTotal": 1529,
+        "linesOfCode": 1511,
+        "totalApiScanned": 975,
+        "minLinesOfCodeToChange": 48,
+        "maxLinesOfCodeToChange": 48
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "659aa234-f378-44ca-8eea-8a34cfbafcaf",
+          "ruleId": "NuGet.0002",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 11.0.0",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 11.0.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 11.0.0",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 11.0.0",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 10.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "10.0.2",
+              "PackageNewVersion": "11.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8e6511da-d2da-41a9-9820-2edf7c52a7cc",
+          "ruleId": "NuGet.0002",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 11.0.0",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 11.0.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 11.0.0",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 10.0.2\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 11.0.0",
+            "label": "Microsoft.EntityFrameworkCore.Tools 10.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "10.0.2",
+              "PackageNewVersion": "11.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "934a988b-f07b-46d7-bc89-16eae9e189c6",
+          "ruleId": "NuGet.0004",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoMapper, 14.0.0\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nAutoMapper, 17.0.0",
+              "protected": "AutoMapper, 14.0.0\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nAutoMapper, 17.0.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "AutoMapper, 14.0.0\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nAutoMapper, 17.0.0",
+            "protectedSnippet": "AutoMapper, 14.0.0\n\n\u30EC\u30B3\u30E1\u30F3\u30C7\u30FC\u30B7\u30E7\u30F3\uFF1A\n\nAutoMapper, 17.0.0",
+            "label": "AutoMapper 14.0.0",
+            "properties": {
+              "PackageId": "AutoMapper",
+              "PackageVersion": "14.0.0",
+              "PackageNewVersion": "17.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "21b06a70-1fc0-45d7-a4d3-6f1f5c458359",
+          "ruleId": "Project.0002",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "\u73FE\u5728\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net10.0\n\u63A8\u5968\u3055\u308C\u308B\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net11.0",
+              "protected": "\u73FE\u5728\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net10.0\n\u63A8\u5968\u3055\u308C\u308B\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net11.0"
+            },
+            "kind": "File",
+            "path": "WebApp\\WebApp.csproj",
+            "snippet": "\u73FE\u5728\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net10.0\n\u63A8\u5968\u3055\u308C\u308B\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net11.0",
+            "protectedSnippet": "\u73FE\u5728\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net10.0\n\u63A8\u5968\u3055\u308C\u308B\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF: net11.0",
+            "properties": {
+              "CurrentTargetFramework": "net10.0",
+              "RecommendedTargetFramework": "net11.0"
+            }
+          }
+        },
+        {
+          "incidentId": "110fb2b5-f606-4cef-9aba-4557921b78b8",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: MemoryStream maximum capacity updated and exception behavior changed ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MemoryStream streamPayload = new MemoryStream();",
+              "protected": "M:System.IO.MemoryStream.#ctor"
+            },
+            "kind": "File",
+            "path": "WebApp\\Infrastructure\\Cosmos\\Models\\MyCosmosJsonSerializer.cs",
+            "snippet": "MemoryStream streamPayload = new MemoryStream();",
+            "protectedSnippet": "M:System.IO.MemoryStream.#ctor",
+            "label": "M:System.IO.MemoryStream.#ctor",
+            "properties": {
+              "CharCount": "2184"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/11/memorystream-max-capacity.md",
+                "isCustom": false
+              }
+            ],
+            "line": 44,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "86ee454b-2aa4-4272-966c-77716f184760",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Produces(\u0022application/json\u0022)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "Produces(\u0022application/json\u0022)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "6d06d114-3918-471d-80df-2107acf22cd8",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 120,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "8a30991b-a4d7-4e0b-b5ba-c1c3d8f5da02",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 120,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "97121e09-9544-42fb-a5c7-496388728b9f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "5f8f516a-34f5-4410-9767-adc88e312656",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "f355f7ef-cd7b-4471-83a8-9836dbe7d374",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status201Created)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status201Created)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 77,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "7017191e-f2d7-4935-89ae-d765bf640ff7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status201Created)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status201Created)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 77,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "e5688fb9-e778-46df-877a-50352de14846",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "75f03b6a-2aa3-4488-b705-baba70bf9984",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "03caf8a4-d0c4-45d4-a5de-f402727d8913",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "be9f4e34-a61e-428f-84ca-50451cf86a15",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Table\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4799"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "6c143f1e-70c8-46ae-8a79-4ff33b8c797b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Produces(\u0022application/json\u0022)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "Produces(\u0022application/json\u0022)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "046857fb-1740-44d3-8869-ef2abb546497",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 120,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "34036100-8714-4d6a-a5ba-91bc5c2683ea",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 120,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "71d535e7-a93b-4dc3-8e23-d2599bd82d0e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "77269009-de65-46fc-b75b-ece9aca820c0",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "3afe8c9f-9221-4d44-a6d2-c26525ff445c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status201Created)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status201Created)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 77,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "daafb85b-3a2d-451b-a68a-151e4dbe5e1b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status201Created)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status201Created)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 77,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "8f73496f-2f3a-4308-ae05-feb5b3d2108a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "332a13bc-4ed1-448f-b1d2-5b52e9e30dec",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "c1d9905f-4fce-478d-a09b-34abeeb2d57e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "c44ef92f-4dc1-4d10-a75f-303b23ad9ba0",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Sql\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4825"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "5fea5c29-30a6-48e1-b57f-ea93a43de8ff",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Produces(\u0022application/json\u0022)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "Produces(\u0022application/json\u0022)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "3c8938af-50bf-4c4e-897d-0bd230e69058",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 120,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "48b3eb02-6560-4ef8-b62d-58acd181508c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 120,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "70b0c376-387c-4cd0-b5bb-af1db9228a8e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "651f5b36-ff0b-4baa-b18f-47ad621c4208",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status204NoContent)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status204NoContent)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "6a91d8dc-bb36-447b-859b-07d71cbc0865",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status201Created)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status201Created)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 77,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "aec53b62-c1b1-48f6-ba95-b0daf120c0f4",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status201Created)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status201Created)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 77,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "6fad4ccd-c135-4ea5-a1f5-3f69778137f8",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "daa3f5ba-64ec-489e-ad5c-36d428895a56",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "9c671b52-7bda-4fec-a4f6-2f96f46c8fec",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "a5623352-a501-41d6-a037-0ab895a33636",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\Cosmos\\ProductsController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "4755"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "afeabf0b-fe58-48f6-9479-1d23648f484c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Produces(\u0022application/json\u0022)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\MessagesController.cs",
+            "snippet": "Produces(\u0022application/json\u0022)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "properties": {
+              "CharCount": "1822"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 9,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "ab3ba8bd-af46-4fac-bcb6-484c73f65ba6",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\MessagesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "1822"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "8c9b0aca-a41d-4a36-b621-2bc0be2cb74c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\MessagesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "1822"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "7bef8705-61b9-4bf9-9668-804d3b2726b7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\MessagesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "1822"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "9da881cb-6583-4886-a46d-d863ba07c5cc",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\MessagesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "1822"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "fa21a10c-171d-4bcc-a94d-e114dce89b9c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Produces(\u0022application/json\u0022)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\FilesController.cs",
+            "snippet": "Produces(\u0022application/json\u0022)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesAttribute",
+            "properties": {
+              "CharCount": "2605"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 10,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "a42fe556-d56c-4be8-b11d-a22fd112dac2",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\FilesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "2605"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 66,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "19c67ba8-3a6d-47c9-a06a-47ac1f177948",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\FilesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "2605"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 66,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "3a8283b7-a4d9-40b4-8858-fcfe2f9bcf4c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\FilesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "2605"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 52,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "5c4be2a3-3b91-4b31-a79a-1a9558b61c0a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: OpenAPI document includes all ProducesResponseType entries per status code ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ProducesResponseType(StatusCodes.Status200OK)",
+              "protected": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute"
+            },
+            "kind": "File",
+            "path": "WebApp\\Controllers\\FilesController.cs",
+            "snippet": "ProducesResponseType(StatusCodes.Status200OK)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "label": "T:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute",
+            "properties": {
+              "CharCount": "2605"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/breaking-changes/11/openapi-multiple-produces-per-status.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "d204d9c5-785f-4c75-9bcb-d21546f94d30",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "WebApp\\Program.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "properties": {
+              "CharCount": "3979"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 100,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "e41cf82b-1014-4def-94bd-3acda7254c1c",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CMySettings\u003E(builder.Configuration.GetSection(\u0022WebApi\u0022));",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "WebApp\\Program.cs",
+            "snippet": "builder.Services.Configure\u003CMySettings\u003E(builder.Configuration.GetSection(\u0022WebApi\u0022));",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "properties": {
+              "CharCount": "3979"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "b3e61107-1add-4a91-b341-2bf3ebf0139f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022KeyVaultUrl\u0022] ?? \u0022\u0022), new DefaultAzureCredential());",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "WebApp\\Program.cs",
+            "snippet": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022KeyVaultUrl\u0022] ?? \u0022\u0022), new DefaultAzureCredential());",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3979"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "d2196160-2ca3-4b79-99b0-90d9bbd03c75",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "WebApp\\WebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022KeyVaultUrl\u0022] ?? \u0022\u0022), new DefaultAzureCredential());",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "WebApp\\Program.cs",
+            "snippet": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022KeyVaultUrl\u0022] ?? \u0022\u0022), new DefaultAzureCredential());",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3979"
+            },
+            "links": [
+              {
+                "title": "API \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 4
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "\u9078\u629E\u3057\u305F\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u306B\u306F\u3001NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3092\u304A\u52E7\u3081\u3057\u307E\u3059\u3002\n\n\u6A19\u6E96\u306E .NET \u30D1\u30C3\u30B1\u30FC\u30B8\u3067\u306F\u3001\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u306E\u5BFE\u8C61\u3068\u306A\u308B .NET \u306E\u30D0\u30FC\u30B8\u30E7\u30F3\u3068\u4E00\u81F4\u3059\u308B\u30D0\u30FC\u30B8\u30E7\u30F3\u3092\u304A\u52E7\u3081\u3057\u307E\u3059\u3002\n\n\u4ED6\u306E\u3044\u304F\u3064\u304B\u306E\u30D1\u30C3\u30B1\u30FC\u30B8\u3082\u3001\u9078\u629E\u3057\u305F\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u306B\u9069\u3057\u3066\u3044\u307E\u3059\u3002",
+      "label": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3092\u304A\u3059\u3059\u3081\u3057\u307E\u3059",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "isFeature": false,
+      "description": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306B\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u306E\u8106\u5F31\u6027\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059\u3002\n\n\u30D1\u30C3\u30B1\u30FC\u30B8\u306F\u3001\u65E2\u77E5\u306E\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u306E\u8106\u5F31\u6027\u3092\u89E3\u6C7A\u3059\u308B\u65B0\u3057\u3044\u30D0\u30FC\u30B8\u30E7\u30F3\u306B\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u3059\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059\u3002",
+      "label": "NuGet \u30D1\u30C3\u30B1\u30FC\u30B8\u306B\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u306E\u8106\u5F31\u6027\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u306F\u3001\u3053\u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u7528\u306B\u9078\u629E\u3057\u305F\u65B0\u3057\u3044\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u306B\u5909\u66F4\u3059\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059\u3002\n\n\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u4E2D\u3001\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u306F\u3001\u8A72\u5F53\u3059\u308B\u5834\u5408\u3001\u5BFE\u5FDC\u3059\u308B\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u306B\u8ABF\u6574\u3055\u308C\u307E\u3059\u3002\u5834\u5408\u306B\u3088\u3063\u3066\u306F\u3001\u6700\u65B0\u306E .NET \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF (Windows\u3001iOS\u3001Android \u306A\u3069) \u3067\u72EC\u81EA\u306E\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u3092\u6301\u3064\u3088\u3046\u306B\u306A\u3063\u305F\u6A5F\u80FD\u3092\u4F7F\u7528\u3057\u3066\u3044\u305F\u5834\u5408\u3001\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u5F8C\u306B\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u3067\u8907\u6570\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u304C\u767A\u751F\u3059\u308B\u5834\u5408\u304C\u3042\u308A\u307E\u3059\u3002",
+      "label": "\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u306E\u30BF\u30FC\u30B2\u30C3\u30C8 \u30D5\u30EC\u30FC\u30E0\u30EF\u30FC\u30AF\u3092\u5909\u66F4\u3059\u308B\u5FC5\u8981\u304C\u3042\u308B",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": ".NET Framework\u304B\u3089 .NET \u3078\u306E\u79FB\u690D\u306E\u6982\u8981",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET \u30D7\u30ED\u30B8\u30A7\u30AF\u30C8 SDK",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "\u9078\u629E\u3057\u305F .NET \u30D0\u30FC\u30B8\u30E7\u30F3\u3067 API \u306E\u52D5\u4F5C\u304C\u5909\u66F4\u3055\u308C\u3066\u3044\u307E\u3059\u3002\u518D\u30B3\u30F3\u30D1\u30A4\u30EB\u3092\u5FC5\u8981\u3068\u305B\u305A\u306B\u30B3\u30FC\u30C9\u3068\u30D0\u30A4\u30CA\u30EA\u306E\u52D5\u4F5C\u304C\u5B9F\u884C\u6642\u306B\u7570\u306A\u308B\u5834\u5408\u304C\u3042\u308A\u307E\u3059\u304C\u3001\u65B0\u3057\u3044\u52D5\u4F5C\u304C\u671B\u307E\u3057\u304F\u306A\u304F\u3001\u66F4\u65B0\u304C\u5FC5\u8981\u306B\u306A\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002",
+      "label": "\u9078\u629E\u3057\u305F .NET \u30D0\u30FC\u30B8\u30E7\u30F3\u3067\u306E\u52D5\u4F5C\u306E\u5909\u66F4",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "\u9078\u629E\u3057\u305F .NET \u30D0\u30FC\u30B8\u30E7\u30F3\u3067\u306F API \u306E\u30D0\u30A4\u30CA\u30EA\u306B\u4E92\u63DB\u6027\u304C\u3042\u308A\u307E\u305B\u3093\u3002\u53E4\u3044\u30D0\u30A4\u30CA\u30EA\u306E\u8AAD\u307F\u8FBC\u307F\u3084\u5B9F\u884C\u3092\u59A8\u3052\u308B\u5F62\u3067 API \u304C\u5909\u66F4\u3055\u308C\u3066\u3044\u308B\u305F\u3081\u3001\u65E2\u5B58\u306E\u30D0\u30A4\u30CA\u30EA\u306B\u5F71\u97FF\u3057\u3001\u591A\u304F\u306E\u5834\u5408\u3001\u518D\u30B3\u30F3\u30D1\u30A4\u30EB\u304C\u5FC5\u8981\u306B\u306A\u308A\u307E\u3059\u3002",
+      "label": "\u9078\u629E\u3057\u305F .NET \u30D0\u30FC\u30B8\u30E7\u30F3\u3067\u306F\u30D0\u30A4\u30CA\u30EA\u306B\u4E92\u63DB\u6027\u304C\u3042\u308A\u307E\u305B\u3093",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": ".NET \u306E\u7834\u58CA\u7684\u5909\u66F4",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
