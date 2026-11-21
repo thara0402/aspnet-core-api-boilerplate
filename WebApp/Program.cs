@@ -24,7 +24,7 @@ if (!builder.Environment.IsDevelopment())
 builder.Services.Configure<MySettings>(builder.Configuration.GetSection("WebApi"));
 
 // Application Insights
-builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions { ConnectionString = builder.Configuration["WebApi:ConnectionString"] });
+builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions { ConnectionString = builder.Configuration["WebApi:AppInsightsConnectionString"] });
 
 // Sql
 builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration["WebApi:SqlConnection"]));
